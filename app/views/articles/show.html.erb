@@ -1,0 +1,10 @@
+<h1><%= @article.title  %></h1>
+<div class="content">
+   <h3><%= @article.content %></h3>
+</div>
+<br><hr>
+
+<%= link_to "Update this article", edit_article_path %> <br><br>
+
+<%= link_to "Back to all articles", articles_path %>
+<%= link_to '<i class="far fa-trash-alt"></i>'.html_safe, article_path(@article.id), method: :delete %>
